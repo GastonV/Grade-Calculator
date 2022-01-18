@@ -2,19 +2,19 @@
 const isValid = (val) => isNumber(val) && val > -1 && val < 101 ? true : false;
 
 
-// Returns True if val is a number
+// Returns True if val is a number.
 const isNumber = (val) => typeof val === 'number' ? true: false;
 
 
-// Returns the sum of an array
+// Returns the sum of an array.
 const sumifier = (arrVal) => arrVal.reduce((prevVal, curVal) => prevVal + curVal);
 
 
-// Returns the average of an array
+// Returns the average of an array.
 const averageGrade = (arrVal) => sumifier(arrVal) / arrVal.length;
 
 
-// Returns a numbered grade based on the average of grades
+// Returns a numbered grade based on the average of grades.
 const gradeLetter = (arrVal) => {
   const gpa = averageGrade(arrVal);
   switch (true) {
@@ -36,7 +36,7 @@ const gradeLetter = (arrVal) => {
   }
 }
 
-
+// Main Function, called to start program.
 const finalGrade = (as1, as2, as3) => {
   const arr = [as1, as2, as3];
   const valid = arr.every(element => isNumber(element) && isValid(element));
