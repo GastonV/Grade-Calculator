@@ -3,7 +3,7 @@ const isValid = (val) => isNumber(val) && val > -1 && val < 101 ? true : false;
 
 
 // Returns True if val is a number.
-const isNumber = (val) => typeof val === 'number' ? true: false;
+const isNumber = (val) => typeof val === 'number' ? true : false;
 
 
 // Returns the sum of an array.
@@ -39,7 +39,7 @@ const gradeLetter = (arrVal) => {
 // Main Function, called to start program.
 const finalGrade = (as1, as2, as3) => {
   const arr = [as1, as2, as3];
-  const valid = arr.every(element => isNumber(element) && isValid(element));
+  const valid = arr.every(element => isValid(element));
   return valid ? gradeLetter(arr) : "You have entered an invalid grade.";
 };
 
