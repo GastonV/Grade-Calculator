@@ -33,6 +33,9 @@ const gradeLetter = (arrVal) => {
     case (gpa > 89 && gpa < 101):
       return 'A';
       break;
+    default: 
+      // use error handling here 
+      // it is good practice to have default in switch case statement
   }
 }
 
